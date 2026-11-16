@@ -34,7 +34,7 @@ h1{font-size:clamp(31px,6vw,58px);font-weight:400;letter-spacing:.08em;margin:0;
 .site-menu{margin:calc(-1 * clamp(28px,5vw,64px)) calc(-1 * clamp(18px,4vw,48px)) 24px;
   padding:12px clamp(18px,4vw,48px);background:rgba(10,12,16,.94);
   border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.site-menu a{display:inline-flex;align-items:center;min-height:40px;padding:7px 13px;
+.site-menu a{display:inline-flex;align-items:center;min-height:44px;padding:7px 13px;
   border:1px solid var(--line);border-radius:999px;font-size:13px;letter-spacing:.04em;
   color:var(--silver);text-decoration:none;white-space:nowrap;
   transition:border-color .18s,color .18s,background .18s}
@@ -64,7 +64,7 @@ h1{font-size:clamp(31px,6vw,58px);font-weight:400;letter-spacing:.08em;margin:0;
 .card .quote{font-size:14px;line-height:1.7;color:#cfcdc7;max-height:8.5em;overflow:hidden;margin:0 0 16px}
 .card .status{font-size:12px;color:var(--silver);margin-top:auto;padding-top:10px;border-top:1px solid rgba(233,231,226,.08)}
 .card .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.card .links a{min-height:36px;display:inline-flex;align-items:center;padding:5px 9px;border:1px solid rgba(233,231,226,.18);font-size:12px;letter-spacing:.04em}
+.card .links a{min-height:44px;display:inline-flex;align-items:center;padding:5px 9px;border:1px solid rgba(233,231,226,.18);font-size:12px;letter-spacing:.04em}
 .card .links a:hover{border-color:var(--gold);text-decoration:none}
 [data-key="awards"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 [data-key="awards"] .card{border-left:3px solid var(--gold);min-height:210px}

@@ -4,6 +4,7 @@
   "private": true,
   "description": "一面照不到边的镜子",
   "scripts": {
-    "dev": "node dev/serve.mjs"
+    "dev": "node dev/serve.mjs",
+    "check:design": "node dev/check-design.mjs"
   }
 }

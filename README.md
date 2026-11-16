@@ -54,6 +54,7 @@
 - `hot/`：照附件《热门优秀案例》HTML 的「实操工坊」立起 12 个热门案例。每例把提示词、对应的生成内容展示（站内可交互示例）与三步复刻放在一起；菜单可从首页、风格库和页面顶部进入。示例是教学复刻，不是原站代码或 AI 实测截图，判据与上面 81 例清单不混用。
 - 首页、`styles/` 与 `hot/` 三处菜单互通；本地 `npm run dev` 也能看。
 - `DESIGN.md` 记录已验证的视觉决策与变量语义契约；`design/tokens.css` 是颜色／安全区变量的唯一文字来源。三页为兼容 GitHub Pages 的零依赖静态部署，各自在样式源里保留同一组值；改色后先跑 `npm run check:design`，再在浏览器里核对计算样式。
+- `.agents/skills/speculum-design-audit/` 是项目级设计审计 skill：用 Impeccable detector 取得真实 findings，区分「站点外壳应修」与「案例展示页作为证据材料的预期命中」；脚本与来源边界都在该目录内。Pages 构建不引入 npm 依赖或 hooks。
 - `hot/` 每张卡末尾的「清单素材入口」指向本目录对应 md，属于原文关键词模板，不表示与工坊提示词是同一物。判据与跳过表都写在 `doctrinale/style-cases/README.md` 和 `styles/README.md`，提示词用法写在 `doctrinale/prompts/README.md`。
 
 规矩还是那一条：**不自作主张，先留位置**。哪天清单变了，镜子再照一遍。

@@ -6,7 +6,7 @@
 <meta name="description" content="Speculum · 无涯。一面照不到边的镜子。此刻只做一件事：把 AI 生成的东西，调到顺眼为止。">
 <title>Speculum · 无涯</title>
 <style>
-  /* 与 design/tokens.css 同步；改色请改令牌源 */
+  /* 与 design/tokens.css 同步；语义契约见 DESIGN.md；改色后跑 npm run check:design */
   :root{
     --ink:#0a0c10; --paper:#e9e7e2; --bg:#10141a; --card:#171b22;
     --panel:rgba(233,231,226,.035); --panel2:rgba(233,231,226,.055); --chip:rgba(233,231,226,.07);
@@ -15,185 +15,228 @@
     --safe:env(safe-area-inset-bottom,0px); color-scheme:dark;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{
-    min-height:100vh;
-    background:var(--ink);
-    color:var(--paper);
+  html{scroll-behavior:smooth}
+  body{margin:0;min-height:100dvh;background:var(--ink);color:var(--paper);
     font-family:"Songti SC","Noto Serif CJK SC","Source Han Serif SC","STSong",Georgia,"Times New Roman",serif;
-    line-height:1.9;
-    -webkit-font-smoothing:antialiased;
-  }
-  body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;
-    background:
-      radial-gradient(1100px 680px at 50% -12%, rgba(201,212,209,.10), transparent 70%),
-      radial-gradient(760px 520px at 88% 108%, rgba(200,169,106,.055), transparent 72%);
-  }
-  body::after{
-    content:"";position:fixed;inset:0;pointer-events:none;opacity:.32;
-    background-image:
-      linear-gradient(to right, var(--line) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-    background-size:64px 64px;
-    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.65), transparent 82%);
-    mask-image:linear-gradient(to bottom, rgba(0,0,0,.65), transparent 82%);
-  }
-  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:clamp(48px,9vh,108px) clamp(24px,6vw,64px) 72px}
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  /* 纸边：左侧一条竖线与顶部一段金色短横，不用网格底纹、光晕或无限动效 */
+  body::before{content:"";position:fixed;top:0;bottom:0;left:0;width:1px;z-index:0;
+    pointer-events:none;background:var(--line)}
+  body::after{content:"";position:fixed;top:0;left:0;width:72px;height:2px;z-index:2;
+    pointer-events:none;background:var(--gold)}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:5px}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  .skip{position:absolute;left:-9999px;top:0;z-index:20;padding:10px 14px;background:var(--paper);color:var(--ink)}
+  .skip:focus{left:12px;top:12px}
 
-  .glass{
-    width:clamp(118px,21vw,176px);aspect-ratio:1;border-radius:50%;
-    margin:0 auto clamp(38px,7vh,68px);position:relative;overflow:hidden;
-    border:1px solid rgba(201,212,209,.24);
-    background:
-      radial-gradient(circle at 32% 27%, rgba(255,255,255,.14), transparent 44%),
-      linear-gradient(145deg, rgba(201,212,209,.11), rgba(10,12,16,.02) 46%, rgba(200,169,106,.075));
-    box-shadow:0 0 90px rgba(201,212,209,.07), inset 0 0 44px rgba(0,0,0,.55);
-  }
-  .glass::after{content:"";position:absolute;inset:13%;border-radius:50%;border:1px solid rgba(233,231,226,.075)}
-  .sheen{
-    position:absolute;left:0;top:-60%;width:42%;height:220%;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.11),transparent);
-    transform:translateX(-190%) rotate(28deg);
-    animation:drift 15s ease-in-out infinite;
-  }
-  @keyframes drift{
-    0%,100%{transform:translateX(-190%) rotate(28deg)}
-    50%{transform:translateX(330%) rotate(28deg)}
-  }
-  @media (prefers-reduced-motion:reduce){.sheen{animation:none;transform:translateX(-190%) rotate(28deg)}}
+  .masthead{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:18px 28px;
+    align-items:baseline;justify-content:space-between;
+    padding:22px clamp(24px,6vw,72px) 18px;border-bottom:1px solid var(--line)}
+  .lockup{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;min-height:44px}
+  .wordmark{font-family:Georgia,"Times New Roman",serif;font-size:24px;letter-spacing:.01em;
+    color:var(--paper);border:0}
+  .wordmark:hover{color:var(--gold);text-decoration:none}
+  .edition{font-size:13px;color:var(--muted);letter-spacing:0}
+  .routes{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center}
+  .routes a{display:inline-flex;align-items:center;min-height:44px;padding:4px 0;
+    border-bottom:2px solid transparent;color:var(--silver);font-size:14px;letter-spacing:0}
+  .routes a:hover{border-bottom-color:var(--gold);color:var(--gold);text-decoration:none}
+  .routes a[aria-current="page"]{border-bottom-color:var(--gold);color:var(--paper)}
+  .routes sup{font-family:Georgia,"Times New Roman",serif;font-size:11px;color:var(--dim);margin-left:4px}
 
-  header{text-align:center}
-  .motto{margin:0 0 20px;color:var(--gold);font-size:14px;letter-spacing:.62em;text-indent:.62em}
-  h1{margin:0;font-size:clamp(42px,9.5vw,88px);font-weight:400;letter-spacing:.17em;text-indent:.17em;line-height:1.12}
-  .sub{margin:22px 0 0;color:var(--muted);font-size:clamp(13px,2vw,16px);letter-spacing:.32em;text-indent:.32em}
+  main{position:relative;z-index:1;max-width:1240px;margin:0 auto;
+    padding:0 clamp(24px,6vw,72px) calc(72px + var(--safe))}
 
-  .lede{max-width:35em;margin:clamp(34px,6vh,54px) auto 0;color:#cfcdc7;font-size:clamp(15px,1.9vw,17px);text-align:center}
+  .opening{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(240px,.72fr);
+    gap:clamp(28px,5vw,72px);padding:clamp(52px,9vh,104px) 0 clamp(56px,8vh,96px)}
+  .opening-rule{height:1px;background:var(--line);margin:0}
+  .folio{margin:0 0 26px;font-size:13px;color:var(--dim);letter-spacing:0}
+  h1{margin:0;font-size:clamp(42px,7.2vw,86px);font-weight:400;letter-spacing:.01em;
+    line-height:1.16;text-align:left}
+  h1 .period{color:var(--gold)}
+  .lede{max-width:34em;margin:30px 0 0;color:#cfcdc7;font-size:clamp(16px,1.7vw,18px);
+    line-height:1.85;letter-spacing:0;text-align:left}
   .lede em{color:var(--silver);font-style:normal}
-  .rule{height:1px;margin:clamp(46px,8vh,78px) 0;background:linear-gradient(90deg,transparent,rgba(233,231,226,.24),transparent)}
+  .side{border-left:1px solid var(--line);padding:0 clamp(20px,3vw,36px) 18px}
+  .side-label{margin:0 0 14px;font-size:13px;color:var(--muted);letter-spacing:0}
+  .side-body{margin:0;font-size:17px;color:var(--paper);line-height:1.8}
+  .counts{margin:34px 0 0;padding:0;border-top:1px solid var(--line)}
+  .counts > div{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    padding:13px 0;border-bottom:1px solid var(--line)}
+  .counts dt{font-size:13.5px;color:var(--muted)}
+  .counts dd{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:26px;color:var(--gold)}
 
-  .kicker{margin:0 0 12px;color:var(--gold);font-size:12px;letter-spacing:.34em}
-  h2{margin:0;font-size:clamp(21px,3.4vw,27px);font-weight:400;letter-spacing:.22em}
-  .note{max-width:36em;margin:14px 0 0;color:var(--muted);font-size:14.5px}
-  .note strong{color:var(--paper);font-weight:400}
+  .index{padding:clamp(46px,7vh,80px) 0 0}
+  .section-head{display:flex;flex-wrap:wrap;gap:8px 32px;align-items:baseline;
+    justify-content:space-between;margin-bottom:26px}
+  .section-head h2{margin:0;font-size:clamp(22px,3vw,30px);font-weight:400;letter-spacing:.02em}
+  .section-head p{margin:0;max-width:48ch;font-size:14px;color:var(--muted);letter-spacing:0}
+  .folio-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .folio-list li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,.78fr) minmax(0,1.25fr) 24px;
+    gap:8px 18px;align-items:center;min-height:72px;padding:14px 10px 14px 0;
+    border-bottom:1px solid var(--line);transition:background .18s ease-out}
+  .folio-list li:hover{background:var(--panel2)}
+  .folio-list .no{font-family:Georgia,"Times New Roman",serif;font-size:14px;color:var(--dim);letter-spacing:.04em}
+  .folio-list li:hover .no{color:var(--gold)}
+  .folio-list .latin{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:12.5px;color:var(--muted)}
+  .folio-list .name{margin:0;font-size:19px;letter-spacing:.02em}
+  .folio-list .name a{display:inline-flex;align-items:center;min-height:44px;color:inherit;
+    border-bottom:1px solid rgba(233,231,226,.22);padding-bottom:2px}
+  .folio-list .name a:hover{border-bottom-color:var(--gold);color:var(--gold);text-decoration:none}
+  .folio-list .now{margin:0;font-size:13.5px;color:var(--muted);line-height:1.6}
+  .folio-list .arrow{font-size:18px;color:var(--dim);transition:transform .18s ease-out,color .18s ease-out}
+  .folio-list li:hover .arrow{color:var(--gold);transform:translateX(4px)}
+  .folio-list li[data-mirror="incerta"] .name{color:var(--muted)}
+  .folio-list li[data-mirror="incerta"] .arrow{visibility:hidden}
 
-  .mirrors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
-  .card{border:1px solid rgba(233,231,226,.12);background:rgba(233,231,226,.016);padding:22px 24px;min-height:138px;transition:border-color .3s,background .3s}
-  .card.open{border-style:dashed;grid-column:1/-1;min-height:0;background:transparent}
-  .card.linked:hover{border-color:rgba(200,169,106,.45);background:rgba(200,169,106,.035)}
-  .latin{margin:0;color:var(--muted);font-family:Georgia,"Times New Roman",serif;font-size:11.5px;letter-spacing:.16em}
-  .name{margin:12px 0 0;font-size:19px;letter-spacing:.14em}
-  .name a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(233,231,226,.18);padding-bottom:2px}
-  .name a:hover{border-bottom-color:var(--gold);color:var(--gold)}
-  .now{margin:12px 0 0;color:var(--muted);font-size:13.5px;letter-spacing:.04em}
+  footer.colophon{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+    gap:18px 40px;margin-top:clamp(64px,9vh,100px);padding-top:24px;
+    border-top:1px solid var(--line);text-align:left}
+  .colophon-title{margin:0 0 6px;font-family:Georgia,"Times New Roman",serif;font-size:16px;color:var(--paper)}
+  .colophon p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.8}
+  .colophon nav{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center}
+  .colophon nav a{display:inline-flex;align-items:center;min-height:44px;font-size:13.5px}
+  .colophon-meta{font-family:Georgia,"Times New Roman",serif;font-size:12px;color:var(--dim);letter-spacing:0}
 
-  footer{margin-top:clamp(52px,9vh,88px);text-align:center;color:var(--muted);font-size:13px;letter-spacing:.16em}
-  footer p{margin:6px 0}
-  footer .url{font-family:Georgia,"Times New Roman",serif;font-size:11.5px;letter-spacing:.1em;opacity:.72}
-  footer a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(233,231,226,.18);padding-bottom:2px}
-  footer a:hover{border-bottom-color:var(--gold);color:var(--gold)}
-
-  .site-menu{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px;align-items:center;
-    padding:12px clamp(24px,6vw,64px);background:rgba(10,12,16,.94);
-    border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
-  .site-menu a{display:inline-flex;align-items:center;min-height:44px;padding:6px 14px;
-    border:1px solid rgba(233,231,226,.18);border-radius:999px;color:var(--silver);
-    font-size:13px;letter-spacing:.06em;text-decoration:none;white-space:nowrap;
-    transition:border-color .2s,color .2s,background .2s}
-  .site-menu a:hover{border-color:var(--gold);color:var(--gold);background:rgba(200,169,106,.05)}
-  .site-menu a.primary{border-color:var(--gold);color:var(--gold)}
-  .site-menu a.primary:hover{background:rgba(200,169,106,.12)}
-  .site-menu .sep{flex:1}
-  @media (max-width:560px){.site-menu{padding:10px 16px}.site-menu a{font-size:12px;padding:6px 10px}}
-
-  @media (max-width:560px){
-    .mirrors{grid-template-columns:1fr}
-    .card.open{grid-column:auto}
-    .card{min-height:0}
+  @media(max-width:880px){
+    .opening{grid-template-columns:1fr}
+    .side{border-left:0;border-top:1px solid var(--line);padding:26px 0 0}
+    .folio-list li{grid-template-columns:40px minmax(0,1fr) auto;gap:2px 14px}
+    .folio-list .latin{grid-column:2;grid-row:1}
+    .folio-list .name{grid-column:2;grid-row:2}
+    .folio-list .now{grid-column:2;grid-row:3}
+    .folio-list .arrow{grid-column:3;grid-row:1/4}
+    .folio-list .no{grid-column:1;grid-row:1/4}
+    footer.colophon{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .folio-list li,.folio-list .arrow,.folio-list .no,.routes a{transition:none}
+    .folio-list li:hover .arrow{transform:none}
   }
 </style>
 </head>
 <body>
-<nav class="site-menu" aria-label="站点菜单">
-  <a href="index.html">Speculum 首页</a>
-  <a href="styles/">网站案例风格库</a>
-  <a href="doctrinale/prompts/README.md">提示词模板</a>
-  <span class="sep"></span>
-  <a class="primary" href="hot/">★ 热门案例 · 提示词与生成内容</a>
-</nav>
-<div class="wrap">
+<a class="skip" href="#main">跳到正文</a>
 
-  <div class="glass" aria-hidden="true"><span class="sheen"></span></div>
+<header class="masthead">
+  <div class="lockup">
+    <a class="wordmark" href="index.html">Speculum</a>
+    <span class="edition">无涯 · 一面照不到边的镜子</span>
+  </div>
+  <nav class="routes" aria-label="站点菜单">
+    <a href="index.html" aria-current="page">首页</a>
+    <a href="styles/">网站案例风格库<sup>81</sup></a>
+    <a href="doctrinale/prompts/README.md">提示词模板</a>
+    <a href="hot/">★ 热门案例<sup>12</sup></a>
+  </nav>
+</header>
 
-  <header>
-    <p class="motto">无涯</p>
-    <h1>Speculum</h1>
-    <p class="sub">一面照不到边的镜子</p>
-  </header>
+<main id="main">
 
-  <p class="lede">十三世纪有一部《大镜》，想收尽当时的知识，最终没能定稿。<br>这里借它的名字，也借它的未完成。<em>不做万物，只留位置。</em></p>
+  <section class="opening">
+    <div>
+      <p class="folio">十三世纪《大镜》未完成；这里借它的名字，也借它的未完成。</p>
+      <h1>一面照不到边的<br>镜子<span class="period">。</span></h1>
+      <p class="lede">博韦的樊尚想把当时的知识收进同一部书：自然、学问、历史。后来有人替他补上第四卷「道德」，全书始终没有定稿，却被传抄、增补、重排了几个世纪。<br>《庄子》说「吾生也有涯，而知也无涯」，本意是劝人别硬追；这里反着用一次：<em>明知收不完，还是开了一间。</em></p>
+    </div>
+    <aside class="side">
+      <p class="side-label">此刻只做一件事</p>
+      <p class="side-body">把 AI 生成的东西，调到顺眼为止。可能是一张图、一段排版、一组配色、一句提示词的第三次改写。没有终版，只有这一版比上一版耐看一点。</p>
+      <dl class="counts">
+        <div><dt>风格案例</dt><dd>81</dd></div>
+        <div><dt>热门工坊</dt><dd>12</dd></div>
+        <div><dt>卷与格</dt><dd>5</dd></div>
+      </dl>
+    </aside>
+  </section>
+  <div class="opening-rule" aria-hidden="true"></div>
 
-  <div class="rule"></div>
-
-  <section>
-    <p class="kicker">此刻 · 只点了一盏灯</p>
-    <h2>把 AI 生成的东西，调到顺眼为止</h2>
-    <p class="note">名字起得大，事情可以做得小。可能是一张图、一段排版、一组配色、一句提示词的第三次改写。<strong>没有终版，只有这一版比上一版耐看一点。</strong>其余位置先空着——空着也是设计。</p>
-
-    <div class="mirrors">
-      <div class="card" data-mirror="naturale">
+  <section class="index" aria-labelledby="index-title">
+    <div class="section-head">
+      <h2 id="index-title">四镜一格</h2>
+      <p>东西是什么 / 人怎么懂它 / 它经历过什么 / 该怎么权衡 / 还看不出好坏的。放进来比放对地方优先。</p>
+    </div>
+    <ol class="folio-list">
+      <li data-mirror="naturale">
+        <span class="no">01</span>
         <p class="latin">Speculum Naturale</p>
         <p class="name">自然之镜</p>
-        <p class="now">原图、未经改动的输入</p>
-      </div>
-      <div class="card" data-mirror="doctrinale">
+        <p class="now">原图、未经改动的输入、找来的参照</p>
+        <span class="arrow" aria-hidden="true">→</span>
+      </li>
+      <li data-mirror="doctrinale">
+        <span class="no">02</span>
         <p class="latin">Speculum Doctrinale</p>
         <p class="name">学问之镜</p>
         <p class="now">提示词、参数、风格笔记、可复用的调法</p>
-      </div>
-      <div class="card" data-mirror="historiale">
+        <span class="arrow" aria-hidden="true">→</span>
+      </li>
+      <li data-mirror="historiale">
+        <span class="no">03</span>
         <p class="latin">Speculum Historiale</p>
         <p class="name">历史之镜</p>
-        <p class="now">前后两版、改了什么、哪版留下</p>
-      </div>
-      <div class="card" data-mirror="morale">
+        <p class="now">前后两版对照、改了什么、哪版留下</p>
+        <span class="arrow" aria-hidden="true">→</span>
+      </li>
+      <li data-mirror="morale">
+        <span class="no">04</span>
         <p class="latin">Speculum Morale</p>
         <p class="name">权衡之镜</p>
-        <p class="now">「顺眼」到底指什么：判断、取舍、复盘</p>
-      </div>
-      <div class="card open" data-mirror="incerta">
+        <p class="now">「顺眼」到底指什么：判断标准、取舍、复盘</p>
+        <span class="arrow" aria-hidden="true">→</span>
+      </li>
+      <li data-mirror="incerta">
+        <span class="no">05</span>
         <p class="latin">Incerta</p>
         <p class="name">未定</p>
         <p class="now">还看不出好坏的，先搁着 · 这一格一直空着</p>
-      </div>
-    </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </li>
+    </ol>
   </section>
 
-  <footer>
-    <p>不做万物，只留位置。</p>
-    <p class="url"><a href="styles/">网站案例风格库</a> · <a href="hot/">热门案例</a> · speculum · &lt;user&gt;.github.io/speculum/</p>
+  <footer class="colophon">
+    <div>
+      <p class="colophon-title">Speculum · 无涯</p>
+      <p>不做万物，只留位置。空着不是欠债，是留白；哪天想放别的，镜子还照得下。</p>
+    </div>
+    <div>
+      <nav aria-label="页脚导航">
+        <a href="styles/">风格库</a>
+        <a href="hot/">热门案例</a>
+        <a href="doctrinale/prompts/README.md">提示词模板</a>
+        <a id="repo-link" href="index.html">仓库</a>
+      </nav>
+      <p class="colophon-meta" id="site-meta">speculum · 主枝 main · 静态页</p>
+    </div>
   </footer>
 
-</div>
+</main>
 
 <script>
-// 在 GitHub Pages 的项目站点上，把卷名链回仓库对应目录。
-// 推断不出来（自定义域名 / 本地打开）时保持纯展示，不产生死链。
+// 在 GitHub Pages 的项目站点上，把卷名链回仓库对应目录；本地打开时保持纯展示，不产生死链。
+// 同时把页脚的仓库入口与站点元信息替换为真实地址，不再露出 <user> 占位符。
 (function () {
-  var m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+  var host = location.hostname;
+  var m = host.match(/^([^.]+)\.github\.io$/i);
   if (!m) return;
   var segs = location.pathname.split('/').filter(Boolean);
   var repo = segs[0] || (m[1] + '.github.io');
-  // 若默认分支不是 main，改下面这一处即可。
   var base = 'https://github.com/' + m[1] + '/' + repo + '/tree/main/';
-  Array.prototype.forEach.call(document.querySelectorAll('[data-mirror]'), function (card) {
-    var name = card.querySelector('.name');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-mirror]'), function (row) {
+    if (row.getAttribute('data-mirror') === 'incerta') return;
+    var name = row.querySelector('.name');
     var a = document.createElement('a');
-    a.href = base + card.getAttribute('data-mirror');
+    a.href = base + row.getAttribute('data-mirror');
     a.textContent = name.textContent;
     name.replaceChild(a, name.firstChild);
-    card.classList.add('linked');
   });
+  var repoLink = document.getElementById('repo-link');
+  if (repoLink) repoLink.href = 'https://github.com/' + m[1] + '/' + repo;
+  var meta = document.getElementById('site-meta');
+  if (meta) meta.textContent = host + '/' + repo + ' · 主枝 main · GitHub Pages';
 })();
 </script>
 </body>

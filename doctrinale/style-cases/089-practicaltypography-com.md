@@ -33,6 +33,7 @@ html: ../../styles/cases/089-practicaltypography-com.html
 
 - 独立页：[打开 `089-practicaltypography-com.html`](../../styles/cases/089-practicaltypography-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`089-practicaltypography-com.md`](../prompts/089-practicaltypography-com.md)
 
 ---
 

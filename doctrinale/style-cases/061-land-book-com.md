@@ -38,6 +38,7 @@ html: ../../styles/cases/061-land-book-com.html
 
 - 独立页：[打开 `061-land-book-com.html`](../../styles/cases/061-land-book-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`061-land-book-com.md`](../prompts/061-land-book-com.md)
 
 ---
 

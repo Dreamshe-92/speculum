@@ -38,6 +38,7 @@ html: ../../styles/cases/039-flim-ai.html
 
 - 独立页：[打开 `039-flim-ai.html`](../../styles/cases/039-flim-ai.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`039-flim-ai.md`](../prompts/039-flim-ai.md)
 
 ---
 

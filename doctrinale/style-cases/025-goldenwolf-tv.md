@@ -33,6 +33,7 @@ html: ../../styles/cases/025-goldenwolf-tv.html
 
 - 独立页：[打开 `025-goldenwolf-tv.html`](../../styles/cases/025-goldenwolf-tv.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`025-goldenwolf-tv.md`](../prompts/025-goldenwolf-tv.md)
 
 ---
 

@@ -39,6 +39,7 @@ html: ../../styles/cases/054-60fps-design.html
 
 - 独立页：[打开 `054-60fps-design.html`](../../styles/cases/054-60fps-design.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`054-60fps-design.md`](../prompts/054-60fps-design.md)
 
 ---
 

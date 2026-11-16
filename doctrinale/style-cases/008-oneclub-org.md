@@ -38,6 +38,7 @@ html: ../../styles/cases/008-oneclub-org.html
 
 - 独立页：[打开 `008-oneclub-org.html`](../../styles/cases/008-oneclub-org.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`008-oneclub-org.md`](../prompts/008-oneclub-org.md)
 
 ---
 

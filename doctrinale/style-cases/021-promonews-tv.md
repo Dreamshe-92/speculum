@@ -42,6 +42,7 @@ html: ../../styles/cases/021-promonews-tv.html
 
 - 独立页：[打开 `021-promonews-tv.html`](../../styles/cases/021-promonews-tv.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`021-promonews-tv.md`](../prompts/021-promonews-tv.md)
 
 ---
 

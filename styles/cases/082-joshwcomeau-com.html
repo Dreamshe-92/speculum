@@ -40,5 +40,56 @@
 <li>页面源码中出现的 font-family 声明：`var(--sp-font-mono)`、`var(--sp-font-body)`。</li>
 <li>页面源码中出现的十六进制颜色：`#2F2F2F`、`#4D4D4D`、`#808080`、`#FFFFFF`、`#E7C400`、`#3A3000`。</li>
 </ul></section>
+<section class="case-block prompt-block" id="prompt"><h2>AI 提示词模板</h2>
+<p class="prompt-note">原文关键词按句读机械切分、未改字；下面两格由你填，预览会实时拼接，复制后可直接粘贴给 AI。</p>
+<div class="prompt-grid">
+<div><label for="prompt-task">我的任务</label><textarea id="prompt-task" rows="3" placeholder="例如：一个落地页首屏 / 一张海报的排版 / 一段卡片展开动效"></textarea></div>
+<div><label for="prompt-constraints">我的约束</label><textarea id="prompt-constraints" rows="3" placeholder="例如：移动端 375px、只用系统字体、不要渐变；没有就留空"></textarea></div>
+</div>
+<pre class="prompt-preview" id="prompt-preview" tabindex="0"></pre>
+<div class="prompt-actions">
+<button type="button" id="copy-prompt">复制提示词</button>
+<a href="../../doctrinale/prompts/082-joshwcomeau-com.md">打开模板 md</a>
+<a href="../../doctrinale/prompts/README.md">模板索引</a>
+<span id="copy-status" role="status" aria-live="polite"></span>
+</div></section>
 <footer><p>本页只整理清单原文与核验线索；不替原站下风格结论。</p><p>不做万物，只留位置。</p></footer>
+<template id="prompt-source"><pre>你正在做一次审美优化。请只把下面【参照素材】当作可用的原文说法，
+不要把它扩写成素材以外的风格结论，也不要声称自己访问过原站。
+
+【参照案例】
+82. Josh W. Comeau
+【原站】https://www.joshwcomeau.com
+【清单分类】前端与交互
+
+【参照素材 · 原文关键词片段】
+- 前端开发者 Josh Comeau 的博客
+- 他讲 CSS 布局
+- 弹簧动画
+- SVG 路径
+- 不是干巴巴地贴代码
+- 而是在文章里塞满能拖
+- 能调参数的交互小图解
+- 拖一下滑块你就明白为什么这条曲线看着更舒服
+- 文章免费
+- 进阶课程收费
+- 原理看懂了
+- 再让 AI 写动效时你才知道该提什么要求
+（以上片段按原文句读机械切分，未改字；完整原文见下。）
+
+【参照素材 · 原文全文】
+前端开发者 Josh Comeau 的博客。他讲 CSS 布局、弹簧动画、SVG 路径，不是干巴巴地贴代码，而是在文章里塞满能拖、能调参数的交互小图解，拖一下滑块你就明白为什么这条曲线看着更舒服。文章免费，进阶课程收费。原理看懂了，再让 AI 写动效时你才知道该提什么要求。
+
+【我的任务】
+[在这里填写：要生成或调整什么，例如「一个落地页首屏」]
+
+【我的约束】
+[在这里填写：尺寸、平台、技术栈、禁用项；没有就写「无」]
+
+【输出要求】
+1. 先列出你实际采用的原文片段，逐字引用。
+2. 再给出方案；素材没有提到的视觉判断，一律标为「待定」，不要写成该案例的风格。
+3. 最后给出一版可直接使用的结果（文案、排版说明、代码或提示词改写）。
+4. 不要补写原站的配色、字体、动效或镜头细节。</pre></template>
+<script src="../prompt.js"></script>
 </main></body></html>

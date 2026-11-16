@@ -33,6 +33,7 @@ html: ../../styles/cases/073-shadertoy-com.html
 
 - 独立页：[打开 `073-shadertoy-com.html`](../../styles/cases/073-shadertoy-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`073-shadertoy-com.md`](../prompts/073-shadertoy-com.md)
 
 ---
 

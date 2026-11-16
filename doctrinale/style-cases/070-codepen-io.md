@@ -33,6 +33,7 @@ html: ../../styles/cases/070-codepen-io.html
 
 - 独立页：[打开 `070-codepen-io.html`](../../styles/cases/070-codepen-io.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`070-codepen-io.md`](../prompts/070-codepen-io.md)
 
 ---
 

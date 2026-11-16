@@ -38,6 +38,7 @@ html: ../../styles/cases/018-shortoftheweek-com.html
 
 - 独立页：[打开 `018-shortoftheweek-com.html`](../../styles/cases/018-shortoftheweek-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`018-shortoftheweek-com.md`](../prompts/018-shortoftheweek-com.md)
 
 ---
 

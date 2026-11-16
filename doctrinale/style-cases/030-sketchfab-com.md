@@ -39,6 +39,7 @@ html: ../../styles/cases/030-sketchfab-com.html
 
 - 独立页：[打开 `030-sketchfab-com.html`](../../styles/cases/030-sketchfab-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`030-sketchfab-com.md`](../prompts/030-sketchfab-com.md)
 
 ---
 

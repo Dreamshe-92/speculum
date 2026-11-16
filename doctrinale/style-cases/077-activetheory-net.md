@@ -40,6 +40,7 @@ html: ../../styles/cases/077-activetheory-net.html
 
 - 独立页：[打开 `077-activetheory-net.html`](../../styles/cases/077-activetheory-net.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`077-activetheory-net.md`](../prompts/077-activetheory-net.md)
 
 ---
 

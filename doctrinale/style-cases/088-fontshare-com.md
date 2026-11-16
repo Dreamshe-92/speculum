@@ -40,6 +40,7 @@ html: ../../styles/cases/088-fontshare-com.html
 
 - 独立页：[打开 `088-fontshare-com.html`](../../styles/cases/088-fontshare-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`088-fontshare-com.md`](../prompts/088-fontshare-com.md)
 
 ---
 

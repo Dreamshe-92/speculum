@@ -33,6 +33,7 @@ html: ../../styles/cases/060-siteinspire-com.html
 
 - 独立页：[打开 `060-siteinspire-com.html`](../../styles/cases/060-siteinspire-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`060-siteinspire-com.md`](../prompts/060-siteinspire-com.md)
 
 ---
 

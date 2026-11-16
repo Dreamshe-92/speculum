@@ -40,6 +40,7 @@ html: ../../styles/cases/007-dandad-org.html
 
 - 独立页：[打开 `007-dandad-org.html`](../../styles/cases/007-dandad-org.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`007-dandad-org.md`](../prompts/007-dandad-org.md)
 
 ---
 

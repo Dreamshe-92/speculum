@@ -34,6 +34,7 @@ html: ../../styles/cases/011-annecyfestival-com.html
 
 - 独立页：[打开 `011-annecyfestival-com.html`](../../styles/cases/011-annecyfestival-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`011-annecyfestival-com.md`](../prompts/011-annecyfestival-com.md)
 
 ---
 

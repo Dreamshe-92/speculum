@@ -41,6 +41,7 @@ html: ../../styles/cases/090-utopia-fyi.html
 
 - 独立页：[打开 `090-utopia-fyi.html`](../../styles/cases/090-utopia-fyi.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`090-utopia-fyi.md`](../prompts/090-utopia-fyi.md)
 
 ---
 

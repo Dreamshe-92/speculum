@@ -31,6 +31,7 @@ html: ../../styles/cases/024-oddfellows-tv.html
 
 - 独立页：[打开 `024-oddfellows-tv.html`](../../styles/cases/024-oddfellows-tv.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`024-oddfellows-tv.md`](../prompts/024-oddfellows-tv.md)
 
 ---
 

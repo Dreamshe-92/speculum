@@ -40,6 +40,7 @@ html: ../../styles/cases/005-motionawards-com.html
 
 - 独立页：[打开 `005-motionawards-com.html`](../../styles/cases/005-motionawards-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`005-motionawards-com.md`](../prompts/005-motionawards-com.md)
 
 ---
 

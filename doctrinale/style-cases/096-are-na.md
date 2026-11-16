@@ -42,6 +42,7 @@ html: ../../styles/cases/096-are-na.html
 
 - 独立页：[打开 `096-are-na.html`](../../styles/cases/096-are-na.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`096-are-na.md`](../prompts/096-are-na.md)
 
 ---
 

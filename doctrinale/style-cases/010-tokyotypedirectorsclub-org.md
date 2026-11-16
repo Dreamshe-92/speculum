@@ -33,6 +33,7 @@ html: ../../styles/cases/010-tokyotypedirectorsclub-org.html
 
 - 独立页：[打开 `010-tokyotypedirectorsclub-org.html`](../../styles/cases/010-tokyotypedirectorsclub-org.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`010-tokyotypedirectorsclub-org.md`](../prompts/010-tokyotypedirectorsclub-org.md)
 
 ---
 

@@ -35,6 +35,7 @@ html: ../../styles/cases/078-framer-com.html
 
 - 独立页：[打开 `078-framer-com.html`](../../styles/cases/078-framer-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`078-framer-com.md`](../prompts/078-framer-com.md)
 
 ---
 

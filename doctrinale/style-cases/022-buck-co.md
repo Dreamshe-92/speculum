@@ -39,6 +39,7 @@ html: ../../styles/cases/022-buck-co.html
 
 - 独立页：[打开 `022-buck-co.html`](../../styles/cases/022-buck-co.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`022-buck-co.md`](../prompts/022-buck-co.md)
 
 ---
 

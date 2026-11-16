@@ -39,6 +39,7 @@ html: ../../styles/cases/083-rauno-me.html
 
 - 独立页：[打开 `083-rauno-me.html`](../../styles/cases/083-rauno-me.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`083-rauno-me.md`](../prompts/083-rauno-me.md)
 
 ---
 

@@ -37,6 +37,7 @@ html: ../../styles/cases/026-ordinaryfolk-co.html
 
 - 独立页：[打开 `026-ordinaryfolk-co.html`](../../styles/cases/026-ordinaryfolk-co.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`026-ordinaryfolk-co.md`](../prompts/026-ordinaryfolk-co.md)
 
 ---
 

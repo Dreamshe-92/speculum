@@ -32,6 +32,7 @@ html: ../../styles/cases/028-therookies-co.html
 
 - 独立页：[打开 `028-therookies-co.html`](../../styles/cases/028-therookies-co.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`028-therookies-co.md`](../prompts/028-therookies-co.md)
 
 ---
 

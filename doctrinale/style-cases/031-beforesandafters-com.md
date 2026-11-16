@@ -32,6 +32,7 @@ html: ../../styles/cases/031-beforesandafters-com.html
 
 - 独立页：[打开 `031-beforesandafters-com.html`](../../styles/cases/031-beforesandafters-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`031-beforesandafters-com.md`](../prompts/031-beforesandafters-com.md)
 
 ---
 

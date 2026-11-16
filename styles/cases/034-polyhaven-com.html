@@ -38,5 +38,49 @@
 <li>页面源码中出现的十六进制颜色：`#F96854`、`#3ABBD9`、`#F28237`、`#A1D04D`、`#BE6FFD`。</li>
 <li>页面 theme-color：`rgb(234, 91, 12)`。</li>
 </ul></section>
+<section class="case-block prompt-block" id="prompt"><h2>AI 提示词模板</h2>
+<p class="prompt-note">原文关键词按句读机械切分、未改字；下面两格由你填，预览会实时拼接，复制后可直接粘贴给 AI。</p>
+<div class="prompt-grid">
+<div><label for="prompt-task">我的任务</label><textarea id="prompt-task" rows="3" placeholder="例如：一个落地页首屏 / 一张海报的排版 / 一段卡片展开动效"></textarea></div>
+<div><label for="prompt-constraints">我的约束</label><textarea id="prompt-constraints" rows="3" placeholder="例如：移动端 375px、只用系统字体、不要渐变；没有就留空"></textarea></div>
+</div>
+<pre class="prompt-preview" id="prompt-preview" tabindex="0"></pre>
+<div class="prompt-actions">
+<button type="button" id="copy-prompt">复制提示词</button>
+<a href="../../doctrinale/prompts/034-polyhaven-com.md">打开模板 md</a>
+<a href="../../doctrinale/prompts/README.md">模板索引</a>
+<span id="copy-status" role="status" aria-live="polite"></span>
+</div></section>
 <footer><p>本页只整理清单原文与核验线索；不替原站下风格结论。</p><p>不做万物，只留位置。</p></footer>
+<template id="prompt-source"><pre>你正在做一次审美优化。请只把下面【参照素材】当作可用的原文说法，
+不要把它扩写成素材以外的风格结论，也不要声称自己访问过原站。
+
+【参照案例】
+34. Poly Haven
+【原站】https://polyhaven.com
+【清单分类】3D 与渲染
+
+【参照素材 · 原文关键词片段】
+- 做三维渲染必存的良心资源站
+- 里面的高清 HDRI 环境光贴图
+- PBR 材质球和扫描模型全部采用 CC0 协议——意思是完全免费
+- 不用注册就能直接下载
+- 拿去接商业私活也不用署名
+（以上片段按原文句读机械切分，未改字；完整原文见下。）
+
+【参照素材 · 原文全文】
+做三维渲染必存的良心资源站。里面的高清 HDRI 环境光贴图、PBR 材质球和扫描模型全部采用 CC0 协议——意思是完全免费、不用注册就能直接下载，拿去接商业私活也不用署名。
+
+【我的任务】
+[在这里填写：要生成或调整什么，例如「一个落地页首屏」]
+
+【我的约束】
+[在这里填写：尺寸、平台、技术栈、禁用项；没有就写「无」]
+
+【输出要求】
+1. 先列出你实际采用的原文片段，逐字引用。
+2. 再给出方案；素材没有提到的视觉判断，一律标为「待定」，不要写成该案例的风格。
+3. 最后给出一版可直接使用的结果（文案、排版说明、代码或提示词改写）。
+4. 不要补写原站的配色、字体、动效或镜头细节。</pre></template>
+<script src="../prompt.js"></script>
 </main></body></html>

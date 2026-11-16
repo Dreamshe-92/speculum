@@ -39,6 +39,7 @@ html: ../../styles/cases/084-emilkowal-ski.html
 
 - 独立页：[打开 `084-emilkowal-ski.html`](../../styles/cases/084-emilkowal-ski.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`084-emilkowal-ski.md`](../prompts/084-emilkowal-ski.md)
 
 ---
 

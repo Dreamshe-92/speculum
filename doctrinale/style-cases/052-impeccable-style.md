@@ -40,6 +40,7 @@ html: ../../styles/cases/052-impeccable-style.html
 
 - 独立页：[打开 `052-impeccable-style.html`](../../styles/cases/052-impeccable-style.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`052-impeccable-style.md`](../prompts/052-impeccable-style.md)
 
 ---
 

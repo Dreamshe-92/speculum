@@ -41,6 +41,7 @@ html: ../../styles/cases/080-reactbits-dev.html
 
 - 独立页：[打开 `080-reactbits-dev.html`](../../styles/cases/080-reactbits-dev.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`080-reactbits-dev.md`](../prompts/080-reactbits-dev.md)
 
 ---
 

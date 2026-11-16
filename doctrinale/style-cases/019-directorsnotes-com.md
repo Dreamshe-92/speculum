@@ -40,6 +40,7 @@ html: ../../styles/cases/019-directorsnotes-com.html
 
 - 独立页：[打开 `019-directorsnotes-com.html`](../../styles/cases/019-directorsnotes-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`019-directorsnotes-com.md`](../prompts/019-directorsnotes-com.md)
 
 ---
 

@@ -38,6 +38,7 @@ html: ../../styles/cases/053-component-gallery.html
 
 - 独立页：[打开 `053-component-gallery.html`](../../styles/cases/053-component-gallery.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`053-component-gallery.md`](../prompts/053-component-gallery.md)
 
 ---
 

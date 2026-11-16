@@ -39,6 +39,7 @@ html: ../../styles/cases/013-motionographer-com.html
 
 - 独立页：[打开 `013-motionographer-com.html`](../../styles/cases/013-motionographer-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`013-motionographer-com.md`](../prompts/013-motionographer-com.md)
 
 ---
 

@@ -39,6 +39,7 @@ html: ../../styles/cases/034-polyhaven-com.html
 
 - 独立页：[打开 `034-polyhaven-com.html`](../../styles/cases/034-polyhaven-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`034-polyhaven-com.md`](../prompts/034-polyhaven-com.md)
 
 ---
 

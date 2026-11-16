@@ -33,6 +33,7 @@ html: ../../styles/cases/002-awwwards-com.html
 
 - 独立页：[打开 `002-awwwards-com.html`](../../styles/cases/002-awwwards-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`002-awwwards-com.md`](../prompts/002-awwwards-com.md)
 
 ---
 

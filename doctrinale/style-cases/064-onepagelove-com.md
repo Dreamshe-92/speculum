@@ -38,6 +38,7 @@ html: ../../styles/cases/064-onepagelove-com.html
 
 - 独立页：[打开 `064-onepagelove-com.html`](../../styles/cases/064-onepagelove-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`064-onepagelove-com.md`](../prompts/064-onepagelove-com.md)
 
 ---
 

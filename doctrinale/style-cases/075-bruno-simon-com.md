@@ -39,6 +39,7 @@ html: ../../styles/cases/075-bruno-simon-com.html
 
 - 独立页：[打开 `075-bruno-simon-com.html`](../../styles/cases/075-bruno-simon-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`075-bruno-simon-com.md`](../prompts/075-bruno-simon-com.md)
 
 ---
 

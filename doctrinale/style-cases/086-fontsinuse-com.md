@@ -35,6 +35,7 @@ html: ../../styles/cases/086-fontsinuse-com.html
 
 - 独立页：[打开 `086-fontsinuse-com.html`](../../styles/cases/086-fontsinuse-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`086-fontsinuse-com.md`](../prompts/086-fontsinuse-com.md)
 
 ---
 

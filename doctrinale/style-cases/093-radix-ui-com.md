@@ -41,6 +41,7 @@ html: ../../styles/cases/093-radix-ui-com.html
 
 - 独立页：[打开 `093-radix-ui-com.html`](../../styles/cases/093-radix-ui-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`093-radix-ui-com.md`](../prompts/093-radix-ui-com.md)
 
 ---
 

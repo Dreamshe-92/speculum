@@ -40,6 +40,7 @@ html: ../../styles/cases/009-aif-runwayml-com.html
 
 - 独立页：[打开 `009-aif-runwayml-com.html`](../../styles/cases/009-aif-runwayml-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`009-aif-runwayml-com.md`](../prompts/009-aif-runwayml-com.md)
 
 ---
 

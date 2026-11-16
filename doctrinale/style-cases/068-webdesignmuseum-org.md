@@ -33,6 +33,7 @@ html: ../../styles/cases/068-webdesignmuseum-org.html
 
 - 独立页：[打开 `068-webdesignmuseum-org.html`](../../styles/cases/068-webdesignmuseum-org.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`068-webdesignmuseum-org.md`](../prompts/068-webdesignmuseum-org.md)
 
 ---
 

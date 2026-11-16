@@ -40,6 +40,7 @@ html: ../../styles/cases/069-tympanus-net.html
 
 - 独立页：[打开 `069-tympanus-net.html`](../../styles/cases/069-tympanus-net.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`069-tympanus-net.md`](../prompts/069-tympanus-net.md)
 
 ---
 

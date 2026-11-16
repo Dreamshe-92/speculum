@@ -39,6 +39,7 @@ html: ../../styles/cases/059-recent-design.html
 
 - 独立页：[打开 `059-recent-design.html`](../../styles/cases/059-recent-design.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`059-recent-design.md`](../prompts/059-recent-design.md)
 
 ---
 

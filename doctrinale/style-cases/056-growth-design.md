@@ -39,6 +39,7 @@ html: ../../styles/cases/056-growth-design.html
 
 - 独立页：[打开 `056-growth-design.html`](../../styles/cases/056-growth-design.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`056-growth-design.md`](../prompts/056-growth-design.md)
 
 ---
 

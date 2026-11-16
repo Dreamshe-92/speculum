@@ -41,6 +41,7 @@ html: ../../styles/cases/067-hoverstat-es.html
 
 - 独立页：[打开 `067-hoverstat-es.html`](../../styles/cases/067-hoverstat-es.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`067-hoverstat-es.md`](../prompts/067-hoverstat-es.md)
 
 ---
 

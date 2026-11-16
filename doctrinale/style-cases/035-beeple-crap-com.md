@@ -35,6 +35,7 @@ html: ../../styles/cases/035-beeple-crap-com.html
 
 - 独立页：[打开 `035-beeple-crap-com.html`](../../styles/cases/035-beeple-crap-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`035-beeple-crap-com.md`](../prompts/035-beeple-crap-com.md)
 
 ---
 

@@ -35,6 +35,7 @@ html: ../../styles/cases/066-darkmodedesign-com.html
 
 - 独立页：[打开 `066-darkmodedesign-com.html`](../../styles/cases/066-darkmodedesign-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`066-darkmodedesign-com.md`](../prompts/066-darkmodedesign-com.md)
 
 ---
 

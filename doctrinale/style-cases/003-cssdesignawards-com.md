@@ -32,6 +32,7 @@ html: ../../styles/cases/003-cssdesignawards-com.html
 
 - 独立页：[打开 `003-cssdesignawards-com.html`](../../styles/cases/003-cssdesignawards-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`003-cssdesignawards-com.md`](../prompts/003-cssdesignawards-com.md)
 
 ---
 

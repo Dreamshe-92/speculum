@@ -39,6 +39,7 @@ html: ../../styles/cases/076-lusion-co.html
 
 - 独立页：[打开 `076-lusion-co.html`](../../styles/cases/076-lusion-co.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`076-lusion-co.md`](../prompts/076-lusion-co.md)
 
 ---
 

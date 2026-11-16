@@ -34,6 +34,7 @@ html: ../../styles/cases/091-coolors-co.html
 
 - 独立页：[打开 `091-coolors-co.html`](../../styles/cases/091-coolors-co.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`091-coolors-co.md`](../prompts/091-coolors-co.md)
 
 ---
 

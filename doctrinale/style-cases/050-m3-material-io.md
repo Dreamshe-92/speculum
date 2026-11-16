@@ -41,6 +41,7 @@ html: ../../styles/cases/050-m3-material-io.html
 
 - 独立页：[打开 `050-m3-material-io.html`](../../styles/cases/050-m3-material-io.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`050-m3-material-io.md`](../prompts/050-m3-material-io.md)
 
 ---
 

@@ -33,6 +33,7 @@ html: ../../styles/cases/072-threejs-org.html
 
 - 独立页：[打开 `072-threejs-org.html`](../../styles/cases/072-threejs-org.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`072-threejs-org.md`](../prompts/072-threejs-org.md)
 
 ---
 

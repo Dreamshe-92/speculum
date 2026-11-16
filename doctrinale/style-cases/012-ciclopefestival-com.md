@@ -39,6 +39,7 @@ html: ../../styles/cases/012-ciclopefestival-com.html
 
 - 独立页：[打开 `012-ciclopefestival-com.html`](../../styles/cases/012-ciclopefestival-com.html)
 - 总画廊：[回到 `styles/`](../../styles/)
+- AI 提示词模板：[`012-ciclopefestival-com.md`](../prompts/012-ciclopefestival-com.md)
 
 ---
 

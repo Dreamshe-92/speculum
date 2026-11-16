@@ -47,49 +47,44 @@ h1{font-size:clamp(32px,5vw,54px);font-weight:400;letter-spacing:.01em;margin:0;
 .controls input::placeholder{color:var(--dim)}
 .controls label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 .result{margin:18px 0 4px;color:var(--muted);font-size:14px}
+/* 档案索引：九个分区共用同一套细线、编号、拉丁卷名与栏目语法。 */
+/* 旧版「一类一皮肤」的粗边条、条纹、信箱黑带、圆角、终端前缀与瀑布列已撤去；
+   九类仍凭索书号与栏目边界互相区分，81 例原文与 [data-case]/[data-key] 筛选钩子不变。 */
 .section{margin-top:clamp(44px,7vw,82px);scroll-margin-top:84px}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:22px}
-.section-head h2{font-size:clamp(20px,3vw,29px);font-weight:400;letter-spacing:.02em;margin:0}
-.section-head .note{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--gold);font-size:12px;letter-spacing:.1em}
-.section-head .hint{color:var(--dim);font-size:12px;letter-spacing:.08em}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
-.card{position:relative;border:1px solid var(--line);background:var(--panel);padding:20px;min-height:190px;display:flex;flex-direction:column;transition:transform .18s ease-out,border-color .18s ease-out,background .18s ease-out}
-.card:hover{transform:translateY(-2px);border-color:rgba(215,183,124,.42);background:var(--panel2)}
-.card .num{font-family:Georgia,"Times New Roman",serif;font-size:12px;letter-spacing:.18em;color:var(--gold)}
-.card h3{font-size:19px;line-height:1.35;font-weight:400;margin:10px 0 8px;letter-spacing:.02em}
-.card .cat{font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:12px}
-.card .quote{font-size:14px;line-height:1.7;color:#cfcdc7;max-height:8.5em;overflow:hidden;margin:0 0 16px}
-.card .status{font-size:12px;color:var(--silver);margin-top:auto;padding-top:10px;border-top:1px solid rgba(233,231,226,.08)}
-.card .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.card .links a{min-height:44px;display:inline-flex;align-items:center;padding:5px 9px;border:1px solid rgba(233,231,226,.18);font-size:12px;letter-spacing:.04em}
-.card .links a:hover{border-color:var(--gold);text-decoration:none}
-[data-key="awards"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-[data-key="awards"] .card{border-left:3px solid var(--gold);min-height:210px}
-[data-key="motion"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-[data-key="motion"] .card{background:linear-gradient(135deg,rgba(215,183,124,.045),rgba(233,231,226,.02)),var(--panel)}
-[data-key="motion"] .card::before{content:"";display:block;height:4px;margin:-20px -20px 18px;background:repeating-linear-gradient(90deg,var(--gold) 0 8px,transparent 8px 14px)}
-[data-key="three"] .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-[data-key="three"] .card{box-shadow:7px 7px 0 rgba(201,212,209,.05)}
-[data-key="cinema"] .grid{grid-template-columns:1fr}
-[data-key="cinema"] .card{border-top:18px solid #050609;border-bottom:18px solid #050609;padding-top:18px;padding-bottom:18px;min-height:0}
-[data-key="cinema"] .quote{max-height:none}
-[data-key="ui"] .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-[data-key="ui"] .card{border-radius:14px}
-[data-key="ui"] .card:nth-child(5n){grid-column:span 2}
-[data-key="web"] .grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:34px}
-[data-key="web"] .card{border:0;border-top:1px solid var(--line);background:transparent;padding:24px 0}
-[data-key="web"] .card:hover{transform:none;background:rgba(233,231,226,.025)}
-[data-key="frontend"] .grid{grid-template-columns:1fr}
-[data-key="frontend"] .card{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Noto Sans Mono CJK SC",monospace;background:#0e1117;border-color:rgba(201,212,209,.18)}
-[data-key="frontend"] .card .num::before{content:"$ ";color:var(--silver)}
-[data-key="frontend"] .card h3::before{content:"# ";color:var(--gold)}
-[data-key="type"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-[data-key="type"] .card{border-left:10px solid var(--silver)}
-[data-key="type"] .card:nth-child(3n){border-left-color:var(--gold)}
-[data-key="type"] .card:nth-child(3n+1){border-left-color:#a8c5bb}
-[data-key="type"] .card h3{font-size:clamp(22px,3.2vw,31px)}
-[data-key="daily"] .grid{columns:3;column-gap:16px;display:block}
-[data-key="daily"] .card{break-inside:avoid;margin-bottom:16px;min-height:0}
+.section-head{display:grid;grid-template-columns:52px minmax(0,1fr) minmax(180px,.62fr);
+  gap:0 clamp(14px,3vw,34px);align-items:start;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:0}
+.folio-mark{font-family:Georgia,"Times New Roman",serif;font-size:24px;line-height:1.1;
+  color:var(--gold);letter-spacing:.04em;padding-top:6px}
+.section-title h2{font-size:clamp(21px,2.8vw,30px);font-weight:400;letter-spacing:.02em;margin:0}
+.section-title .latin{margin:5px 0 0;font-family:Georgia,"Times New Roman",serif;
+  font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.section-meta{display:flex;flex-direction:column;gap:6px;text-align:right;padding-top:6px}
+.section-meta .columns{font-size:12px;color:var(--silver);letter-spacing:.04em}
+.section-meta .boundary{font-size:12px;color:var(--dim);letter-spacing:0;line-height:1.6}
+
+.grid{display:grid;gap:0;grid-template-columns:1fr}
+.card{position:relative;display:grid;
+  grid-template-columns:88px minmax(160px,.62fr) minmax(0,1.5fr) minmax(160px,.68fr);
+  grid-template-areas:"no title quote meta" "no cat quote links";
+  gap:0 clamp(14px,2.5vw,30px);align-items:start;
+  padding:20px 0;border:0;border-bottom:1px solid var(--line);
+  background:transparent;min-height:0;transition:background .18s ease-out}
+.card:hover{transform:none;border-color:var(--line);background:var(--panel)}
+.card .num{grid-area:no;font-family:Georgia,"Times New Roman",serif;font-size:13px;
+  letter-spacing:.06em;color:var(--dim);padding-top:3px;white-space:nowrap}
+.card:hover .num{color:var(--gold)}
+.card h3{grid-area:title;font-size:19px;line-height:1.35;font-weight:400;margin:0 0 0;letter-spacing:.02em}
+.card .cat{grid-area:cat;font-size:12px;color:var(--dim);letter-spacing:0;margin:5px 0 0;line-height:1.6}
+.card .quote{grid-area:quote;font-size:14px;line-height:1.7;color:#cfcdc7;
+  max-height:none;overflow:visible;margin:0}
+.card .status{grid-area:meta;font-size:12px;color:var(--silver);margin:0;
+  padding-top:0;border-top:0;line-height:1.7}
+.card .links{grid-area:links;display:flex;flex-wrap:wrap;gap:0 14px;margin-top:8px}
+.card .links a{min-height:44px;display:inline-flex;align-items:center;padding:0;
+  border:0;border-bottom:1px solid rgba(233,231,226,.18);font-size:12px;letter-spacing:0}
+.card .links a:hover{border-bottom-color:var(--gold);text-decoration:none}
+
 .empty{border:1px dashed var(--line);padding:28px;color:var(--muted);text-align:center;margin:28px 0}
 .skips{margin-top:64px;border-top:1px solid var(--line);padding-top:28px}
 .skips h2{font-size:23px;font-weight:400;letter-spacing:.1em}
@@ -99,6 +94,7 @@ h1{font-size:clamp(32px,5vw,54px);font-weight:400;letter-spacing:.01em;margin:0;
 .skip-table th{color:var(--gold);font-weight:400;letter-spacing:.08em}
 .skip-table td:first-child{font-family:Georgia,"Times New Roman",serif;color:var(--silver);white-space:nowrap}
 footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px;line-height:1.8}
+
 .case-main{max-width:820px;margin:0 auto}
 .case-hero{border:1px solid var(--line);background:var(--panel);padding:clamp(24px,5vw,48px);margin-top:30px}
 .case-hero .num{color:var(--gold);font-family:Georgia,"Times New Roman",serif;letter-spacing:.18em;font-size:13px}
@@ -114,21 +110,29 @@ footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:v
 .case-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .case-actions a{min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(233,231,226,.2);padding:9px 14px;font-size:14px}
 .case-actions a.primary{border-color:var(--gold);background:rgba(215,183,124,.08)}
+
 @media (max-width:1000px){
-  .grid,[data-key="ui"] .grid,[data-key="three"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  [data-key="daily"] .grid{columns:2}
+  .card{grid-template-columns:70px minmax(140px,.6fr) minmax(0,1fr);
+    grid-template-areas:"no title quote" "no cat quote" "no meta quote" "no links quote"}
 }
 @media (max-width:680px){
   .shell{padding-left:16px;padding-right:16px}
   .controls{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px;grid-template-columns:1fr;position:static}
   .top{align-items:flex-start}.back{width:100%}
-  .grid,.section-grid,[data-key="awards"] .grid,[data-key="motion"] .grid,[data-key="three"] .grid,[data-key="ui"] .grid,[data-key="web"] .grid,[data-key="type"] .grid{grid-template-columns:1fr}
-  [data-key="ui"] .card:nth-child(5n){grid-column:auto}
-  [data-key="daily"] .grid{columns:1}
+  .section-head{grid-template-columns:38px minmax(0,1fr);gap:0 12px}
+  .folio-mark{font-size:19px}
+  .section-meta{grid-column:2;flex-direction:row;flex-wrap:wrap;gap:4px 14px;text-align:left;padding-top:10px}
+  .section-meta .boundary{flex-basis:100%}
+  .card{grid-template-columns:1fr;
+    grid-template-areas:"no" "title" "cat" "quote" "meta" "links";gap:0;padding:18px 0}
+  .card .num{margin-bottom:8px}
+  .card .quote{margin-top:12px}
+  .card .status,.card .links{margin-top:10px}
   .case-facts{grid-template-columns:1fr}
   .skip-table{display:block;overflow-x:auto;white-space:nowrap}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+
 
 /* AI 提示词模板 */
 .prompt-note{max-width:70ch;color:var(--muted);font-size:14px;margin:12px 0 18px}

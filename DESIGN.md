@@ -69,3 +69,4 @@
 
 - 2026-11-16：发现上一轮令牌同步把 `hot/` 的 `--ink` 语义改成页面底色，却未同步改引用，导致正文／按钮文字近乎不可见；本契约据此补上语义表与计算样式检查。
 - 2026-11-17：用 Impeccable detector 审计站点外壳，首页从 3 条 findings 降到 0；去掉装饰网格、光晕、无限漂移、pill 菜单、eyebrow chip 与宽字距正文，首页改为非对称档案索引式版式，三页菜单与页脚统一为横向文字导航。案例展示页与第 12 例反面教材的 findings 按「已知不做」保留。
+- 2026-11-17：`styles/` 九类卡片从「一类一皮肤」改为与首页一致的档案索引语言——罗马数字索书号、拉丁卷名、栏目边界与细线行；撤去 side-tab 粗边条、repeating-stripes、信箱黑带、圆角 Bento、终端前缀和瀑布列，`gallery.css` 的 detector findings 归零。81 例原文、描述、URL、跳过表、提示词模板、`[data-case]`/`[data-key]`/`#q`/`#filter` 筛选钩子与 `cases/` 独立展示页均未改动。README 的 GitHub Pages 地址改为已核验的真实 URL。

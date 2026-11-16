@@ -51,7 +51,8 @@
 - `doctrinale/style-cases/`：每例一页风格 md。名称、分类、URL、描述与「风格要点」都照清单原文；抓到的页面元数据只作访问核验线索，不写成原站风格结论。
 - `styles/`：同一批事实的 HTML 画廊与每例独立展示页，按九类版式陈列，并带真实可用的搜索与分类筛选。
 - `doctrinale/prompts/`：每例一页 AI 提示词模板。原文按句读机械切成片段，逐字保留；骨架只规定怎么使用素材，不替原站下风格结论。案例页可填任务与约束、实时预览、一键复制。
-- 首页可从 `styles/` 进去；本地 `npm run dev` 也能看。判据与跳过表都写在 `doctrinale/style-cases/README.md` 和 `styles/README.md`，提示词用法写在 `doctrinale/prompts/README.md`。
+- `hot/`：照附件《热门优秀案例》HTML 的「实操工坊」立起 12 个热门案例。每例把提示词、对应的生成内容展示（站内可交互示例）与三步复刻放在一起；菜单可从首页、风格库和页面顶部进入。示例是教学复刻，不是原站代码或 AI 实测截图，判据与上面 81 例清单不混用。
+- 首页、`styles/` 与 `hot/` 三处菜单互通；本地 `npm run dev` 也能看。判据与跳过表都写在 `doctrinale/style-cases/README.md` 和 `styles/README.md`，提示词用法写在 `doctrinale/prompts/README.md`。
 
 规矩还是那一条：**不自作主张，先留位置**。哪天清单变了，镜子再照一遍。
 

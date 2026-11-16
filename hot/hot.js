@@ -2,7 +2,7 @@
 // ===== Workshop interactions =====
 function $(id){return document.getElementById(id)}
 // copy buttons
-document.querySelectorAll('.copy-btn').forEach(function(b){b.addEventListener('click',function(){var el=$(b.getAttribute('data-copy'));if(!el)return;var txt=el.textContent.trim();function done(){var o=b.textContent;b.textContent='已复制 ✓';setTimeout(function(){b.textContent=o},1600)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done).catch(function(){fallback()})}else{fallback()}function fallback(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){b.textContent='复制失败，请长按文本'}document.body.removeChild(ta)}})});
+document.querySelectorAll('.copy-btn').forEach(function(b){b.addEventListener('click',function(){var el=$(b.getAttribute('data-copy'));if(!el)return;var txt=el.textContent.trim();function done(){var o=b.textContent;b.textContent='已复制 ✓';b.setAttribute('aria-live','polite');setTimeout(function(){b.textContent=o;b.removeAttribute('aria-live')},1600)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done).catch(function(){fallback()})}else{fallback()}function fallback(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){b.textContent='复制失败，请长按文本'}document.body.removeChild(ta)}})});
 // 1 wordmark
 var wmR=$('wmRange');if(wmR){wmR.addEventListener('input',function(){$('wmText').style.fontSize=wmR.value+'px';$('wmVal').textContent=wmR.value+'px'})}
 // 2 patmos tap
@@ -46,3 +46,8 @@ var tb=$('tiltBtn');if(tb){tb.addEventListener('click',function(){
     setTimeout(function(){tb.style.transition=''},320)},260);
 })}
 
+
+// 本轮优化：给纯悬停示例补可读说明，键盘用户知道可用 Enter / Space 触发
+['patmosBox','tiltStage','magStage','spotCard'].forEach(function(id){
+  var e=$(id);if(e&&!e.getAttribute('aria-label'))e.setAttribute('aria-label','可交互示例：点按或用键盘触发，也可用鼠标悬停');
+});

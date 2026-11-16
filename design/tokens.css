@@ -1,0 +1,8 @@
+/* Speculum 设计令牌 · 唯一来源。 */
+:root{
+  --ink:#0a0c10; --paper:#e9e7e2; --bg:#10141a; --card:#171b22;
+  --panel:rgba(233,231,226,.035); --panel2:rgba(233,231,226,.055); --chip:rgba(233,231,226,.07);
+  --muted:#a4a9b0; --dim:#7c828a; --silver:#c9d4d1; --gold:#d7b77c; --tag-bg:rgba(215,183,124,.15);
+  --accent:#176b5c; --accent2:#d7b77c; --line:rgba(233,231,226,.14);
+  --safe:env(safe-area-inset-bottom,0px); color-scheme:dark;
+}
